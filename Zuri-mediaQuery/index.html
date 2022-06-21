@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Zuri-Media-Query</title>
+</head>
+<style type="text/css">
+	*, p, h2{
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		background-color: #ff815c;
+		background-image: url(images/bg-intro-desktop.png);
+		font-family: sans-serif;
+		display: flex;
+		align-items: center;
+	}
+	p{
+		font-size: .8rem;
+	}
+	.container{
+		display: flex;
+		flex-wrap: wrap;
+		margin: 10rem 150px;
+		height: 400px;
+		gap:  3rem;
+	}
+	.text-left-container{
+		display: flex;
+		align-items: center;
+		max-width: 35%;
+	}
+	.text-left{
+		color: #f1f1f1;
+	}
+	.text-left h2{
+		font-size: 2rem;
+	}
+	.text-left p{
+		margin: 2rem 0;
+		line-height: 1rem;
+	}
+	.trial{
+		background-color: #600080;
+		color: white;
+		margin: 1rem 0;
+		padding:  1rem 0;
+		text-align: center;
+		font-size: 1rem;
+		border-radius: 5px;
+	}
+	.trial span{
+		font-weight: 700;
+	}
+	.form-container{
+		width: 50%;
+		align-items: center;
+	}
+	.footer-tag{
+		color: gray;
+		margin: 1rem 0;
+	}
+	.footer-tag span{
+		color: red;
+		font-weight: 700;
+	}
+	form{
+		background-color: #f1f1f1;
+		padding: 1.5rem;
+		display: block;
+		border-radius: 5px;
+	}
+	input, button{
+		margin: .5rem 0;
+		width: 100%;
+		height: 30px;
+		padding: 1rem;
+	}
+	button{
+		color: #f1f1f1;
+		background-color: #008021;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		padding: 1.5rem;
+		border-radius: 5px;
+	}
+	@media screen and (max-width:600px){
+		body{
+			background-image: url(images/bg-intro-mobile-1.png);
+			height: 100%;
+			display: flex;
+			align-items: center;
+		}
+		.container{
+			display: block;
+			margin: 2rem 50px;
+			height: 100%;
+		}
+		.text-left-container{
+			max-width: 100%;
+		}
+		.text-left-container, .form-container{
+			width: 100%;
+		}
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="text-left-container">
+		<div class="text-left">
+			<h2>Learn to code by watching others</h2>
+			<p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
+		</div>
+		</div>
+		<div class="form-container">
+			<p class="trial"><span>Try it free 7days</span> then $20/mo. thereafter</p>
+			<form>
+				<input type="text" name="firstName" required placeholder="First Name" oninvalid="this.setCustomValidity('First Name cannot be empty')" oninput="this.setCustomValidity('')">
+				<input type="text" name="lastName" placeholder="Last Name" required oninvalid="this.setCustomValidity('Last Name cannot be empty')" oninput="this.setCustomValidity('')">
+				<input type="email" name="email" placeholder="Email Address" required oninvalid="this.setCustomValidity('Looks like this is not an email')" oninput="this.setCustomValidity('')">
+				<input type="password" name="password" placeholder="password" required oninvalid="this.setCustomValidity('Password cannot be empty')" oninput="this.setCustomValidity('')">
+				<button>CLAIM YOUR FREE TRIAL</button>
+				<p class="footer-tag">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
